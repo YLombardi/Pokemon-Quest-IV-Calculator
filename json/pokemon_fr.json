@@ -1,31 +1,5 @@
-/*
-All pokemon data scraped from serebii
-https://www.serebii.net/quest/pokemon.shtml
-
-allPokemon
-
-allPokemon = {};
-rows = document.querySelectorAll(".dextable tbody tr")
-rows.forEach((el, i)=>{
-	if (!(i % 2)) return;
-	specs = el.getElementsByTagName('td');
-	let pokemon = {};
-	let pokemon_name = specs[3].getElementsByTagName('u')[0].innerText;
-	allPokemon[pokemon_name] = {
-		dex: specs[0].innerText.substr(1,4),
-		number: +specs[0].innerText.substr(1,4),
-		img: specs[1].getElementsByTagName('img')[0].src,
-		types: [],
-		fight_style: specs[5].innerText,
-		hitpoints: +specs[6].innerText,
-		attack: +specs[7].innerText,
-		obtain_method: specs[8].innerText,
-	};
-	[...specs[4].getElementsByTagName('img')].forEach((el,i)=>{allPokemon[pokemon_name].types.push(el.src.match(/(\w+)\.gif/)[1]);});
-});
-*/
-allPokemon = {
-  "Bulbasaur": {
+{
+  "Bulbizarre": {
     "dex": "001",
     "number": 1,
     "img": "https://www.serebii.net/quest/pokemon/001.png",
@@ -38,7 +12,7 @@ allPokemon = {
     "attack": 75,
     "obtain_method": "Mulligan Stew à la Cube\nYellow Curry à la Cube\nSludge Soup à la Cube\nVeggie Smoothie à la Cube\n"
   },
-  "Ivysaur": {
+  "Herbizarre": {
     "dex": "002",
     "number": 2,
     "img": "https://www.serebii.net/quest/pokemon/002.png",
@@ -51,7 +25,7 @@ allPokemon = {
     "attack": 100,
     "obtain_method": "Evolve Bulbasaur (Lv. 16)"
   },
-  "Venusaur": {
+  "Florizarre": {
     "dex": "003",
     "number": 3,
     "img": "https://www.serebii.net/quest/pokemon/003.png",
@@ -64,7 +38,7 @@ allPokemon = {
     "attack": 150,
     "obtain_method": "Evolve Ivysaur (Lv. 32)"
   },
-  "Charmander": {
+  "Salamèche": {
     "dex": "004",
     "number": 4,
     "img": "https://www.serebii.net/quest/pokemon/004.png",
@@ -76,7 +50,7 @@ allPokemon = {
     "attack": 125,
     "obtain_method": "Mulligan Stew à la Cube\nRed Stew à la Cube\nHot Pot à la Cube\n"
   },
-  "Charmeleon": {
+  "Reptincel": {
     "dex": "005",
     "number": 5,
     "img": "https://www.serebii.net/quest/pokemon/005.png",
@@ -88,7 +62,7 @@ allPokemon = {
     "attack": 400,
     "obtain_method": "Evolve Charmander (Lv. 16)"
   },
-  "Charizard": {
+  "Dracaufeu": {
     "dex": "006",
     "number": 6,
     "img": "https://www.serebii.net/quest/pokemon/006.png",
