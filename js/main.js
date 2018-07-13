@@ -109,6 +109,9 @@ function loadAllPokemon(language = "en") {
 
         $('input').change(function(){
             updateFields();
-        })
+        });
+
+        loadMyList();
     });
+
 }
